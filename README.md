@@ -27,7 +27,7 @@ Guide on how to dump your NX titles from the sysNAND's USER partition to NSP
 
 ## Steps - SwitchSDTool
 9. Remember `prod.keys`? Copy that file into SwitchSDTool's root folder (where its executable resides). Rename the file here to `keys.txt`
-10. Move your `PRODINFO.bin` dump to SwichSDTool's root folder as well.
+10. Move your `PRODINFO.bin` dump to SwitchSDTool's root folder as well.
 11. Create a new folder on here as well, label it `NSP` (otherwise it will fail to dump later).
 12. Launch SwitchSDTool, and now click the following buttons in this exact order, selecting the following when prompted:
     - `Select SD Folder` : "USER (NxNandManager)"
