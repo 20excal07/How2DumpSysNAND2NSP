@@ -23,7 +23,7 @@ Guide on how to dump your NX titles from the sysNAND's USER partition to NSP
 5. Dump your own *PRODINFO.bin* by selecting `PRODINFO` from the list of partitions, and clicking "Advanced Copy" (the diskette icon with a gear).
 6. Choose `Crypto: decrypt` and specify the location of the dump output. Leave the other checkboxes empty, dump it, then set this file aside for now.
 7. Now select `USER` and click on "Mount". Make sure that the only checkbox that's ticked on this window is the `Read-Only` option. You can mount it whereever, but I personally would mount it on a far-away drive letter like `N:` just to be on the safe side.
-8. Next select `SYSTEM` and mount that too. Do the same as you did for `SYSTEM` but on a different drive letter.
+8. Next select `SYSTEM` and mount that too. Do the same as you did for `USER` but on a different drive letter.
 
 ## Steps - SwitchSDTool
 9. Remember `prod.keys`? Copy that file into SwitchSDTool's root folder (where its executable resides). Rename the file here to `keys.txt`
