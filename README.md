@@ -47,7 +47,7 @@ Once you're done, remember to unmount everything in NxNandManager first before d
 You have a few options:
 - NSPsplitty : https://github.com/Aionmagan/NSPsplitty
 - splitNSP : https://github.com/AnalogMan151/splitNSP
-- [**`dd`**](nsp_dd.sh) (faster) or [**`split`**](nspsplit.sh) (slower) via Linux / WSL
+- [**`dd`**](nsp_dd.sh) (faster) or [**`split`**](nsp_split.sh) (slower) via Linux / WSL
 
 ### To use `split` manually, execute:
 ```
