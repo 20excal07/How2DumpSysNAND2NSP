@@ -31,7 +31,6 @@ else
  fi
  sleep 0.5
 
- sleep 0.5
  echo Splitting into $NUM_OF_SPLIT files...
  split --verbose --bytes=$((SPLITSIZE)) -d "${inFile}" "${nspDir}/"
 fi
