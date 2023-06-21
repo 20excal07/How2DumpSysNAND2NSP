@@ -55,4 +55,4 @@ split --bytes=$((131070*32768)) -d "nspThatIsLargerThan4GB.nsp" ""
 ```
 This will produce split files labeled `00`, `01`, `02` and onwards, depending on how big the file is. You will then need to create a new folder with a label that ends in the `.nsp` extension (yes, we are still talking about a folder), then move all of the numbered split files into this folder.
 
-Once done, right-click the folder -> `Properties` -> `Advanced...` -> tick `Folder is ready for archiving` (also known as the Archive bit). Now you can use this NSP like normal when you move the folder back to your NX device.
+Once done, on Windows, right-click the folder -> `Properties` -> `Advanced...` -> tick `Folder is ready for archiving` (also known as the Archive bit). If you did the split on Linux, you'll need to move it to your NX device first and set the Archive bit using something like *NX-Shell*. You should be able to use the NSP like normal after doing this.
