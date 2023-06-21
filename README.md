@@ -42,3 +42,17 @@ Guide on how to dump your NX titles from the sysNAND's USER partition to NSP
 If you haven't had any issues up to this point, your titles should now appear under the `Games` tab. From this point, you can either select a single game to dump, or dump everything on the list to an NSP package.
 
 Once you're done, remember to unmount everything in NxNandManager first before disconnecting your device, just to be safe. Have fun!
+
+## Bonus - Fitting a large NSP under 4GB (for FAT32 SD cards)
+You have a few options:
+- NSPsplitty : https://github.com/Aionmagan/NSPsplitty
+- splitNSP : https://github.com/AnalogMan151/splitNSP
+- `dd` or `split` utilities via Linux / WSL
+
+### To use `split`, execute:
+```
+split --bytes=$((131070*32768)) -d "nspThatIsLargerThan4GB.nsp" ""
+```
+This will produce split files labeled `00`, `01`, `02` and onwards, depending on how big the file is. You will then need to create a new folder with a label that ends in the `.nsp` extension (yes, we are still talking about a folder), then move all of the numbered split files into this folder.
+
+Once done, right-click the folder -> `Properties` -> `Advanced...` -> tick `Folder is ready for archiving` (also known as the Archive bit). Now you can use this NSP like normal when you move the folder back to your NX device.
