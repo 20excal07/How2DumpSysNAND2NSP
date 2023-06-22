@@ -49,8 +49,17 @@ You have a few options:
 - splitNSP : https://github.com/AnalogMan151/splitNSP
 - [**`dd`**](nsp_dd.sh) (faster) or [**`split`**](nsp_split.sh) (slower) via Linux / WSL
 
-### To use `split` manually, execute:
+### Usage
+```shell
+./nsp_dd.sh <inputFile> [outputDir]
 ```
+...or...
+```shell
+./nsp_split.sh <inputFile> [outputDir]
+```
+
+### To use `split` manually, execute:
+```shell
 split --bytes=$((131070*32768)) -d "nspThatIsLargerThan4GB.nsp" ""
 ```
 This will produce split files labeled `00`, `01`, `02` and onwards, depending on how big the file is. You will then need to create a new folder with a label that ends in the `.nsp` extension (yes, we are still talking about a folder), then move all of the numbered split files into this folder.
